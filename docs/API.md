@@ -8,10 +8,10 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
     * [.ApiDefinition](#module_sway.ApiDefinition)
         * [new ApiDefinition(definition, definitionRemotesResolved, definitionFullyResolved, references, options)](#new_module_sway.ApiDefinition_new)
         * [.getOperation(idOrPathOrReq, [method])](#module_sway.ApiDefinition+getOperation) ⇒ <code>[Operation](#module_sway.Operation)</code>
-        * [.getOperations([path])](#module_sway.ApiDefinition+getOperations) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-        * [.getOperationsByTag([tag])](#module_sway.ApiDefinition+getOperationsByTag) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+        * [.getOperations([path])](#module_sway.ApiDefinition+getOperations) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+        * [.getOperationsByTag([tag])](#module_sway.ApiDefinition+getOperationsByTag) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
         * [.getPath(pathOrReq)](#module_sway.ApiDefinition+getPath) ⇒ <code>[Path](#module_sway.Path)</code>
-        * [.getPaths()](#module_sway.ApiDefinition+getPaths) ⇒ <code>[Array.&lt;Path&gt;](#module_sway.Path)</code>
+        * [.getPaths()](#module_sway.ApiDefinition+getPaths) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Path&gt;](#module_sway.Path)</code>
         * [.registerFormat(name, validator)](#module_sway.ApiDefinition+registerFormat)
         * [.registerFormatGenerator(name, formatGenerator)](#module_sway.ApiDefinition+registerFormatGenerator)
         * [.registerValidator(validator)](#module_sway.ApiDefinition+registerValidator)
@@ -23,10 +23,10 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
     * [.Operation](#module_sway.Operation)
         * [new Operation(pathObject, method, definition, definitionFullyResolved, pathToDefinition)](#new_module_sway.Operation_new)
         * [.getParameter(name, [location])](#module_sway.Operation+getParameter) ⇒ <code>[Parameter](#module_sway.Parameter)</code>
-        * [.getParameters()](#module_sway.Operation+getParameters) ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+        * [.getParameters()](#module_sway.Operation+getParameters) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
         * [.getResponse([statusCode])](#module_sway.Operation+getResponse) ⇒ <code>[Response](#module_sway.Response)</code>
-        * [.getResponses()](#module_sway.Operation+getResponses) ⇒ <code>[Array.&lt;Response&gt;](#module_sway.Response)</code>
-        * [.getSecurity()](#module_sway.Operation+getSecurity) ⇒ <code>Array.&lt;object&gt;</code>
+        * [.getResponses()](#module_sway.Operation+getResponses) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Response&gt;](#module_sway.Response)</code>
+        * [.getSecurity()](#module_sway.Operation+getSecurity) ⇒ <code>[ &#x27;Array&#x27; ].&lt;object&gt;</code>
         * [.validateRequest(req, [options])](#module_sway.Operation+validateRequest) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
         * [.validateResponse(res, [options])](#module_sway.Operation+validateResponse) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
     * [.Parameter](#module_sway.Parameter)
@@ -37,10 +37,10 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
         * [new ParameterValue(parameterObject, raw)](#new_module_sway.ParameterValue_new)
     * [.Path](#module_sway.Path)
         * [new Path(apiDefinition, path, definition, definitionFullyResolved, pathToDefinition)](#new_module_sway.Path_new)
-        * [.getOperation(idOrMethod)](#module_sway.Path+getOperation) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-        * [.getOperations()](#module_sway.Path+getOperations) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-        * [.getOperationsByTag(tag)](#module_sway.Path+getOperationsByTag) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-        * [.getParameters()](#module_sway.Path+getParameters) ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+        * [.getOperation(idOrMethod)](#module_sway.Path+getOperation) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+        * [.getOperations()](#module_sway.Path+getOperations) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+        * [.getOperationsByTag(tag)](#module_sway.Path+getOperationsByTag) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+        * [.getParameters()](#module_sway.Path+getParameters) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
     * [.RequestValidationFunction](#module_sway.RequestValidationFunction) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
     * [.RequestValidationOptions](#module_sway.RequestValidationOptions) : <code>object</code>
     * [.Response](#module_sway.Response)
@@ -53,7 +53,7 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
     * [.ServerResponseWrapper](#module_sway.ServerResponseWrapper) : <code>object</code>
     * [.ValidationEntry](#module_sway.ValidationEntry) : <code>object</code>
     * [.ValidationResults](#module_sway.ValidationResults) : <code>object</code>
-    * [.create(options)](#module_sway.create) ⇒ <code>[Promise.&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code>
+    * [.create(options)](#module_sway.create) ⇒ <code>[[ &#x27;Promise&#x27; ].&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code>
 
 <a name="module_sway.ApiDefinition"></a>
 
@@ -65,12 +65,12 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
 | --- | --- | --- |
 | customFormats | <code>object</code> | The key/value pair of custom formats *(The keys are the format name and the values are async functions.  See [ZSchema Custom Formats](https://github.com/zaggino/z-schema#register-a-custom-format))* |
 | customFormatGenerators | <code>object</code> | The key/value pair of custom format generators *(The keys are the format name and the values are functions.  See [json-schema-mocker Custom Format](https://github.com/json-schema-faker/json-schema-faker#custom-formats))* |
-| customValidators | <code>[Array.&lt;DocumentValidationFunction&gt;](#module_sway.DocumentValidationFunction)</code> | The array of custom validators |
+| customValidators | <code>[[ &#x27;Array&#x27; ].&lt;DocumentValidationFunction&gt;](#module_sway.DocumentValidationFunction)</code> | The array of custom validators |
 | definition | <code>object</code> | The original OpenAPI definition |
 | definitionRemotesResolved | <code>object</code> | The OpenAPI definition with only its remote references resolved *(This means all references to external/remote documents are replaced with its dereferenced value but all local references are left unresolved.)* |
 | definitionFullyResolved | <code>object</code> | The OpenAPI definition with all of its resolvable references resolved *(This means that all resolvable references are replaced with their dereferenced value.)* |
 | documentationUrl | <code>string</code> | The URL to the OpenAPI documentation |
-| pathObjects | <code>[Array.&lt;Path&gt;](#module_sway.Path)</code> | The unique `Path` objects |
+| pathObjects | <code>[[ &#x27;Array&#x27; ].&lt;Path&gt;](#module_sway.Path)</code> | The unique `Path` objects |
 | options | <code>object</code> | The options passed to the constructor |
 | references | <code>object</code> | The reference metadata *(See [JsonRefs~ResolvedRefDetails](https://github.com/whitlockjc/json-refs/blob/master/docs/API.md#module_JsonRefs..ResolvedRefDetails))* |
 | version | <code>string</code> | The OpenAPI version |
@@ -79,10 +79,10 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
 * [.ApiDefinition](#module_sway.ApiDefinition)
     * [new ApiDefinition(definition, definitionRemotesResolved, definitionFullyResolved, references, options)](#new_module_sway.ApiDefinition_new)
     * [.getOperation(idOrPathOrReq, [method])](#module_sway.ApiDefinition+getOperation) ⇒ <code>[Operation](#module_sway.Operation)</code>
-    * [.getOperations([path])](#module_sway.ApiDefinition+getOperations) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-    * [.getOperationsByTag([tag])](#module_sway.ApiDefinition+getOperationsByTag) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+    * [.getOperations([path])](#module_sway.ApiDefinition+getOperations) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+    * [.getOperationsByTag([tag])](#module_sway.ApiDefinition+getOperationsByTag) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
     * [.getPath(pathOrReq)](#module_sway.ApiDefinition+getPath) ⇒ <code>[Path](#module_sway.Path)</code>
-    * [.getPaths()](#module_sway.ApiDefinition+getPaths) ⇒ <code>[Array.&lt;Path&gt;](#module_sway.Path)</code>
+    * [.getPaths()](#module_sway.ApiDefinition+getPaths) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Path&gt;](#module_sway.Path)</code>
     * [.registerFormat(name, validator)](#module_sway.ApiDefinition+registerFormat)
     * [.registerFormatGenerator(name, formatGenerator)](#module_sway.ApiDefinition+registerFormatGenerator)
     * [.registerValidator(validator)](#module_sway.ApiDefinition+registerValidator)
@@ -93,12 +93,7 @@ A library that simplifies [OpenAPI](https://www.openapis.org/) integrations.
 <a name="new_module_sway.ApiDefinition_new"></a>
 
 #### new ApiDefinition(definition, definitionRemotesResolved, definitionFullyResolved, references, options)
-The OpenAPI Definition object.
-
-**Note:** Do not use directly.
-
-**Extra Properties:** Other than the documented properties, this object also exposes all properties of the
-[OpenAPI Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#openapi-object).
+The OpenAPI Definition object.**Note:** Do not use directly.**Extra Properties:** Other than the documented properties, this object also exposes all properties of the[OpenAPI Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#openapi-object).
 
 
 | Param | Type | Description |
@@ -112,19 +107,10 @@ The OpenAPI Definition object.
 <a name="module_sway.ApiDefinition+getOperation"></a>
 
 #### apiDefinition.getOperation(idOrPathOrReq, [method]) ⇒ <code>[Operation](#module_sway.Operation)</code>
-Returns the operation for the given path and operation.
-
-**Note:** Below is the list of properties used when `reqOrPath` is an `http.ClientRequest` *(or equivalent)*:
-
-  * `method`
-  * `originalUrl`
-  * `url`
-
-*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
+Returns the operation for the given path and operation.**Note:** Below is the list of properties used when `reqOrPath` is an `http.ClientRequest` *(or equivalent)*:  * `method`  * `originalUrl`  * `url`*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
 
 **Kind**: instance method of <code>[ApiDefinition](#module_sway.ApiDefinition)</code>  
-**Returns**: <code>[Operation](#module_sway.Operation)</code> - The `Operation` for the provided operation id, or path and method or `undefined` if
-there is no operation for that operation id, or path and method combination  
+**Returns**: <code>[Operation](#module_sway.Operation)</code> - The `Operation` for the provided operation id, or path and method or `undefined` ifthere is no operation for that operation id, or path and method combination  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -133,11 +119,11 @@ there is no operation for that operation id, or path and method combination
 
 <a name="module_sway.ApiDefinition+getOperations"></a>
 
-#### apiDefinition.getOperations([path]) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+#### apiDefinition.getOperations([path]) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
 Returns all operations for the provided path or all operations in the API.
 
 **Kind**: instance method of <code>[ApiDefinition](#module_sway.ApiDefinition)</code>  
-**Returns**: <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> - All `Operation` objects for the provided path or all API operations  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> - All `Operation` objects for the provided path or all API operations  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -145,11 +131,11 @@ Returns all operations for the provided path or all operations in the API.
 
 <a name="module_sway.ApiDefinition+getOperationsByTag"></a>
 
-#### apiDefinition.getOperationsByTag([tag]) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+#### apiDefinition.getOperationsByTag([tag]) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
 Returns all operations for the provided tag.
 
 **Kind**: instance method of <code>[ApiDefinition](#module_sway.ApiDefinition)</code>  
-**Returns**: <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> - All `Operation` objects for the provided tag  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> - All `Operation` objects for the provided tag  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -158,14 +144,7 @@ Returns all operations for the provided tag.
 <a name="module_sway.ApiDefinition+getPath"></a>
 
 #### apiDefinition.getPath(pathOrReq) ⇒ <code>[Path](#module_sway.Path)</code>
-Returns the path object for the given path or request.
-
-**Note:** Below is the list of properties used when `reqOrPath` is an `http.ClientRequest` *(or equivalent)*:
-
-  * `originalUrl`
-  * `url`
-
-*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
+Returns the path object for the given path or request.**Note:** Below is the list of properties used when `reqOrPath` is an `http.ClientRequest` *(or equivalent)*:  * `originalUrl`  * `url`*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
 
 **Kind**: instance method of <code>[ApiDefinition](#module_sway.ApiDefinition)</code>  
 **Returns**: <code>[Path](#module_sway.Path)</code> - The corresponding `Path` object for the requested path or request  
@@ -176,11 +155,11 @@ Returns the path object for the given path or request.
 
 <a name="module_sway.ApiDefinition+getPaths"></a>
 
-#### apiDefinition.getPaths() ⇒ <code>[Array.&lt;Path&gt;](#module_sway.Path)</code>
+#### apiDefinition.getPaths() ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Path&gt;](#module_sway.Path)</code>
 Returns all path objects for the OpenAPI definition.
 
 **Kind**: instance method of <code>[ApiDefinition](#module_sway.ApiDefinition)</code>  
-**Returns**: <code>[Array.&lt;Path&gt;](#module_sway.Path)</code> - The `Path` objects  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Path&gt;](#module_sway.Path)</code> - The `Path` objects  
 <a name="module_sway.ApiDefinition+registerFormat"></a>
 
 #### apiDefinition.registerFormat(name, validator)
@@ -263,7 +242,7 @@ Options used when creating the `ApiDefinition`.
 | jsonRefs | <code>object</code> | *(See [JsonRefs~JsonRefsOptions](https://github.com/whitlockjc/json-refs/blob/master/docs/API.md#module_JsonRefs..JsonRefsOptions))* |
 | customFormats | <code>object</code> | The key/value pair of custom formats *(The keys are the format name and the values are async functions.  See [ZSchema Custom Formats](https://github.com/zaggino/z-schema#register-a-custom-format))* |
 | customFormatGenerators | <code>object</code> | The key/value pair of custom format generators *(The keys are the format name and the values are functions.  See [json-schema-mocker Custom Format](https://github.com/json-schema-faker/json-schema-faker#custom-formats))* |
-| customValidators | <code>[Array.&lt;DocumentValidationFunction&gt;](#module_sway.DocumentValidationFunction)</code> | The custom validators |
+| customValidators | <code>[[ &#x27;Array&#x27; ].&lt;DocumentValidationFunction&gt;](#module_sway.DocumentValidationFunction)</code> | The custom validators |
 
 <a name="module_sway.DocumentValidationFunction"></a>
 
@@ -289,8 +268,8 @@ Function used for custom validation of OpenAPI documents
 | definitionFullyResolved | <code>object</code> | The operation definition with all of its resolvable references resolved |
 | method | <code>string</code> | The HTTP method for this operation |
 | pathObject | <code>[Path](#module_sway.Path)</code> | The `Path` object |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the operation definition |
-| parameterObjects | <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code> | The `Parameter` objects |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the operation definition |
+| parameterObjects | <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code> | The `Parameter` objects |
 | ptr | <code>string</code> | The JSON Pointer to the operation |
 | securityDefinitions | <code>object</code> | The security definitions used by this operation |
 
@@ -298,22 +277,17 @@ Function used for custom validation of OpenAPI documents
 * [.Operation](#module_sway.Operation)
     * [new Operation(pathObject, method, definition, definitionFullyResolved, pathToDefinition)](#new_module_sway.Operation_new)
     * [.getParameter(name, [location])](#module_sway.Operation+getParameter) ⇒ <code>[Parameter](#module_sway.Parameter)</code>
-    * [.getParameters()](#module_sway.Operation+getParameters) ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+    * [.getParameters()](#module_sway.Operation+getParameters) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
     * [.getResponse([statusCode])](#module_sway.Operation+getResponse) ⇒ <code>[Response](#module_sway.Response)</code>
-    * [.getResponses()](#module_sway.Operation+getResponses) ⇒ <code>[Array.&lt;Response&gt;](#module_sway.Response)</code>
-    * [.getSecurity()](#module_sway.Operation+getSecurity) ⇒ <code>Array.&lt;object&gt;</code>
+    * [.getResponses()](#module_sway.Operation+getResponses) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Response&gt;](#module_sway.Response)</code>
+    * [.getSecurity()](#module_sway.Operation+getSecurity) ⇒ <code>[ &#x27;Array&#x27; ].&lt;object&gt;</code>
     * [.validateRequest(req, [options])](#module_sway.Operation+validateRequest) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
     * [.validateResponse(res, [options])](#module_sway.Operation+validateResponse) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
 
 <a name="new_module_sway.Operation_new"></a>
 
 #### new Operation(pathObject, method, definition, definitionFullyResolved, pathToDefinition)
-The OpenAPI Operation object.
-
-**Note:** Do not use directly.
-
-**Extra Properties:** Other than the documented properties, this object also exposes all properties of the
-[OpenAPI Operation Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#operationObject).
+The OpenAPI Operation object.**Note:** Do not use directly.**Extra Properties:** Other than the documented properties, this object also exposes all properties of the[OpenAPI Operation Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#operationObject).
 
 
 | Param | Type | Description |
@@ -322,7 +296,7 @@ The OpenAPI Operation object.
 | method | <code>string</code> | The operation method |
 | definition | <code>object</code> | The operation definition *(The raw operation definition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The operation definition with all of its resolvable references resolved |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the operation definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the operation definition |
 
 <a name="module_sway.Operation+getParameter"></a>
 
@@ -330,8 +304,7 @@ The OpenAPI Operation object.
 Returns the parameter with the provided name and location when provided.
 
 **Kind**: instance method of <code>[Operation](#module_sway.Operation)</code>  
-**Returns**: <code>[Parameter](#module_sway.Parameter)</code> - The `Parameter` matching the location and name combination or `undefined` if there
-is no match  
+**Returns**: <code>[Parameter](#module_sway.Parameter)</code> - The `Parameter` matching the location and name combination or `undefined` if thereis no match  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -340,11 +313,11 @@ is no match
 
 <a name="module_sway.Operation+getParameters"></a>
 
-#### operation.getParameters() ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+#### operation.getParameters() ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
 Returns all parameters for the operation.
 
 **Kind**: instance method of <code>[Operation](#module_sway.Operation)</code>  
-**Returns**: <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code> - All `Parameter` objects for the operation  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code> - All `Parameter` objects for the operation  
 <a name="module_sway.Operation+getResponse"></a>
 
 #### operation.getResponse([statusCode]) ⇒ <code>[Response](#module_sway.Response)</code>
@@ -359,40 +332,22 @@ Returns the response for the requested status code or the default response *(if 
 
 <a name="module_sway.Operation+getResponses"></a>
 
-#### operation.getResponses() ⇒ <code>[Array.&lt;Response&gt;](#module_sway.Response)</code>
+#### operation.getResponses() ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Response&gt;](#module_sway.Response)</code>
 Returns all responses for the operation.
 
 **Kind**: instance method of <code>[Operation](#module_sway.Operation)</code>  
-**Returns**: <code>[Array.&lt;Response&gt;](#module_sway.Response)</code> - All `Response` objects for the operation  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Response&gt;](#module_sway.Response)</code> - All `Response` objects for the operation  
 <a name="module_sway.Operation+getSecurity"></a>
 
-#### operation.getSecurity() ⇒ <code>Array.&lt;object&gt;</code>
-Returns the composite security definitions for this operation.
-
-The difference between this API and `this.security` is that `this.security` is the raw `security` value for the
-operation where as this API will return the global `security` value when available and this operation's security
-is undefined.
+#### operation.getSecurity() ⇒ <code>[ &#x27;Array&#x27; ].&lt;object&gt;</code>
+Returns the composite security definitions for this operation.The difference between this API and `this.security` is that `this.security` is the raw `security` value for theoperation where as this API will return the global `security` value when available and this operation's securityis undefined.
 
 **Kind**: instance method of <code>[Operation](#module_sway.Operation)</code>  
-**Returns**: <code>Array.&lt;object&gt;</code> - The security for this operation  
+**Returns**: <code>[ &#x27;Array&#x27; ].&lt;object&gt;</code> - The security for this operation  
 <a name="module_sway.Operation+validateRequest"></a>
 
 #### operation.validateRequest(req, [options]) ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
-Validates the request.
-
-**Note:** Below is the list of `req` properties used *(req should be an `http.ClientRequest` or equivalent)*:
-
-  * `body`: Used for `body` and `formData` parameters
-  * `files`: Used for `formData` parameters whose `type` is `file`
-  * `headers`: Used for `header` parameters and consumes
-  * `originalUrl`: used for `path` parameters
-  * `query`: Used for `query` parameters
-  * `url`: used for `path` parameters
-
-For `path` parameters, we will use the operation's `regexp` property to parse out path parameters using the
-`originalUrl` or `url` property.
-
-*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
+Validates the request.**Note:** Below is the list of `req` properties used *(req should be an `http.ClientRequest` or equivalent)*:  * `body`: Used for `body` and `formData` parameters  * `files`: Used for `formData` parameters whose `type` is `file`  * `headers`: Used for `header` parameters and consumes  * `originalUrl`: used for `path` parameters  * `query`: Used for `query` parameters  * `url`: used for `path` parametersFor `path` parameters, we will use the operation's `regexp` property to parse out path parameters using the`originalUrl` or `url` property.*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
 
 **Kind**: instance method of <code>[Operation](#module_sway.Operation)</code>  
 **Returns**: <code>[ValidationResults](#module_sway.ValidationResults)</code> - The validation results  
@@ -427,7 +382,7 @@ Validates the response.
 | definitionFullyResolved | <code>object</code> | The parameter definition with all of its resolvable references resolved |
 | operationObject | <code>[Operation](#module_sway.Operation)</code> | The `Operation` object the parameter belongs to *(Can be `undefined` for path-level parameters)* |
 | pathObject | <code>[Path](#module_sway.Path)</code> | The `Path` object the parameter belongs to |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the parameter definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the parameter definition |
 | ptr | <code>string</code> | The JSON Pointer to the parameter definition |
 | schema | <code>object</code> | The JSON Schema for the parameter *(For non-body parameters, this is a computed value)* |
 
@@ -440,12 +395,7 @@ Validates the response.
 <a name="new_module_sway.Parameter_new"></a>
 
 #### new Parameter(opOrPathObject, definition, definitionFullyResolved, pathToDefinition)
-The OpenAPI Parameter object.
-
-**Note:** Do not use directly.
-
-**Extra Properties:** Other than the documented properties, this object also exposes all properties of the
-[OpenAPI Parameter Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#parameterObject).
+The OpenAPI Parameter object.**Note:** Do not use directly.**Extra Properties:** Other than the documented properties, this object also exposes all properties of the[OpenAPI Parameter Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#parameterObject).
 
 
 | Param | Type | Description |
@@ -453,7 +403,7 @@ The OpenAPI Parameter object.
 | opOrPathObject | <code>[Operation](#module_sway.Operation)</code> &#124; <code>[Path](#module_sway.Path)</code> | The `Operation` or `Path` object |
 | definition | <code>object</code> | The parameter definition *(The raw parameter definition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The parameter definition with all of its resolvable references resolved |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the parameter definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the parameter definition |
 
 <a name="module_sway.Parameter+getSample"></a>
 
@@ -465,28 +415,13 @@ Returns a sample value for the parameter based on its schema;
 <a name="module_sway.Parameter+getValue"></a>
 
 #### parameter.getValue(req) ⇒ <code>[ParameterValue](#module_sway.ParameterValue)</code>
-Returns the parameter value from the request.
-
-**Note:** Below is the list of `req` properties used *(req should be an `http.ClientRequest` or equivalent)*:
-
-  * `body`: Used for `body` and `formData` parameters
-  * `files`: Used for `formData` parameters whose `type` is `file`
-  * `headers`: Used for `header` parameters
-  * `originalUrl`: used for `path` parameters
-  * `query`: Used for `query` parameters
-  * `url`: used for `path` parameters
-
-For `path` parameters, we will use the operation's `regexp` property to parse out path parameters using the
-`originalUrl` or `url` property.
-
-*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
+Returns the parameter value from the request.**Note:** Below is the list of `req` properties used *(req should be an `http.ClientRequest` or equivalent)*:  * `body`: Used for `body` and `formData` parameters  * `files`: Used for `formData` parameters whose `type` is `file`  * `headers`: Used for `header` parameters  * `originalUrl`: used for `path` parameters  * `query`: Used for `query` parameters  * `url`: used for `path` parametersFor `path` parameters, we will use the operation's `regexp` property to parse out path parameters using the`originalUrl` or `url` property.*(See: [https://nodejs.org/api/http.html#http_class_http_clientrequest](https://nodejs.org/api/http.html#http_class_http_clientrequest))*
 
 **Kind**: instance method of <code>[Parameter](#module_sway.Parameter)</code>  
 **Returns**: <code>[ParameterValue](#module_sway.ParameterValue)</code> - The parameter value object  
 **Throws**:
 
-- <code>Error</code> If the `in` value of the parameter's schema is not valid or if the `req` property to retrieve the
-parameter is missing
+- <code>Error</code> If the `in` value of the parameter's schema is not valid or if the `req` property to retrieve theparameter is missing
 
 
 | Param | Type | Description |
@@ -510,9 +445,7 @@ parameter is missing
 <a name="new_module_sway.ParameterValue_new"></a>
 
 #### new ParameterValue(parameterObject, raw)
-Object representing a parameter value.
-
-**Note:** Do not use directly.
+Object representing a parameter value.**Note:** Do not use directly.
 
 
 | Param | Type | Description |
@@ -531,30 +464,25 @@ Object representing a parameter value.
 | apiDefinition | <code>[ApiDefinition](#module_sway.ApiDefinition)</code> | The `ApiDefinition` object |
 | definition | <code>object</code> | The path definition *(The raw path definition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The path definition with all of its resolvable references resolved |
-| operationObjects | <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> | The `Operation` objects |
-| parameterObjects | <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code> | The path-level `Parameter` objects |
+| operationObjects | <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> | The `Operation` objects |
+| parameterObjects | <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code> | The path-level `Parameter` objects |
 | path | <code>string</code> | The path string |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the path definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the path definition |
 | ptr | <code>ptr</code> | The JSON Pointer to the path |
 | regexp | <code>regexp</code> | The `RegExp` used to match request paths against this path |
 
 
 * [.Path](#module_sway.Path)
     * [new Path(apiDefinition, path, definition, definitionFullyResolved, pathToDefinition)](#new_module_sway.Path_new)
-    * [.getOperation(idOrMethod)](#module_sway.Path+getOperation) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-    * [.getOperations()](#module_sway.Path+getOperations) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-    * [.getOperationsByTag(tag)](#module_sway.Path+getOperationsByTag) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
-    * [.getParameters()](#module_sway.Path+getParameters) ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+    * [.getOperation(idOrMethod)](#module_sway.Path+getOperation) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+    * [.getOperations()](#module_sway.Path+getOperations) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+    * [.getOperationsByTag(tag)](#module_sway.Path+getOperationsByTag) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
+    * [.getParameters()](#module_sway.Path+getParameters) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
 
 <a name="new_module_sway.Path_new"></a>
 
 #### new Path(apiDefinition, path, definition, definitionFullyResolved, pathToDefinition)
-The Path object.
-
-**Note:** Do not use directly.
-
-**Extra Properties:** Other than the documented properties, this object also exposes all properties of the
-[OpenAPI Path Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#pathItemObject).
+The Path object.**Note:** Do not use directly.**Extra Properties:** Other than the documented properties, this object also exposes all properties of the[OpenAPI Path Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#pathItemObject).
 
 
 | Param | Type | Description |
@@ -563,16 +491,15 @@ The Path object.
 | path | <code>string</code> | The path string |
 | definition | <code>object</code> | The path definition *(The raw path definition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The path definition with all of its resolvable references resolved |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the path definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the path definition |
 
 <a name="module_sway.Path+getOperation"></a>
 
-#### path.getOperation(idOrMethod) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+#### path.getOperation(idOrMethod) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
 Return the operation for this path and operation id or method.
 
 **Kind**: instance method of <code>[Path](#module_sway.Path)</code>  
-**Returns**: <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path and method or `undefined` if there is no
-operation for the provided method  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path and method or `undefined` if there is nooperation for the provided method  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -580,18 +507,18 @@ operation for the provided method
 
 <a name="module_sway.Path+getOperations"></a>
 
-#### path.getOperations() ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+#### path.getOperations() ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
 Return the operations for this path.
 
 **Kind**: instance method of <code>[Path](#module_sway.Path)</code>  
-**Returns**: <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path  
 <a name="module_sway.Path+getOperationsByTag"></a>
 
-#### path.getOperationsByTag(tag) ⇒ <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code>
+#### path.getOperationsByTag(tag) ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code>
 Return the operations for this path and tag.
 
 **Kind**: instance method of <code>[Path](#module_sway.Path)</code>  
-**Returns**: <code>[Array.&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path and tag  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Operation&gt;](#module_sway.Operation)</code> - The `Operation` objects for this path and tag  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -599,11 +526,11 @@ Return the operations for this path and tag.
 
 <a name="module_sway.Path+getParameters"></a>
 
-#### path.getParameters() ⇒ <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code>
+#### path.getParameters() ⇒ <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code>
 Return the parameters for this path.
 
 **Kind**: instance method of <code>[Path](#module_sway.Path)</code>  
-**Returns**: <code>[Array.&lt;Parameter&gt;](#module_sway.Parameter)</code> - The `Parameter` objects for this path  
+**Returns**: <code>[[ &#x27;Array&#x27; ].&lt;Parameter&gt;](#module_sway.Parameter)</code> - The `Parameter` objects for this path  
 <a name="module_sway.RequestValidationFunction"></a>
 
 ### sway.RequestValidationFunction ⇒ <code>[ValidationResults](#module_sway.ValidationResults)</code>
@@ -641,7 +568,7 @@ Request validation options.
 | definition | <code>object</code> | The response definition *(The raw responsedefinition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The response definition with all of its resolvable references resolved |
 | operationObject | <code>[Operation](#module_sway.Operation)</code> | The Operation object |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the path definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the path definition |
 | ptr | <code>string</code> | The JSON Pointer to the response definition |
 | statusCode | <code>string</code> | The status code |
 
@@ -655,12 +582,7 @@ Request validation options.
 <a name="new_module_sway.Response_new"></a>
 
 #### new Response(operationObject, statusCode, definition, definitionFullyResolved, pathToDefinition)
-The OpenAPI Response object.
-
-**Note:** Do not use directly.
-
-**Extra Properties:** Other than the documented properties, this object also exposes all properties of the
-[OpenAPI Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#responseObject).
+The OpenAPI Response object.**Note:** Do not use directly.**Extra Properties:** Other than the documented properties, this object also exposes all properties of the[OpenAPI Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#responseObject).
 
 
 | Param | Type | Description |
@@ -669,7 +591,7 @@ The OpenAPI Response object.
 | statusCode | <code>string</code> | The status code |
 | definition | <code>object</code> | The response definition *(The raw response definition __after__ remote references were resolved)* |
 | definitionFullyResolved | <code>object</code> | The response definition with all of its resolvable references resolved |
-| pathToDefinition | <code>Array.&lt;string&gt;</code> | The path segments to the path definition |
+| pathToDefinition | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path segments to the path definition |
 
 <a name="module_sway.Response+getExample"></a>
 
@@ -732,11 +654,7 @@ Response validation options.
 <a name="module_sway.ServerResponseWrapper"></a>
 
 ### sway.ServerResponseWrapper : <code>object</code>
-Server response wrapper.
-
-Since the low level `http.ServerResponse` object is not always guaranteed and even if it is, there is no public way
-to gather the necessary parts of the response to perform validation, this object encapsulates the required response
-information to perform response validation.
+Server response wrapper.Since the low level `http.ServerResponse` object is not always guaranteed and even if it is, there is no public wayto gather the necessary parts of the response to perform validation, this object encapsulates the required responseinformation to perform response validation.
 
 **Kind**: static typedef of <code>[sway](#module_sway)</code>  
 **Properties**
@@ -751,11 +669,7 @@ information to perform response validation.
 <a name="module_sway.ValidationEntry"></a>
 
 ### sway.ValidationEntry : <code>object</code>
-Validation error/warning object.
-
-When this object is created as a result of JSON Schema validation, this object is created by
-[z-schema](https://github.com/zaggino/z-schema) and it owns the structure so there can be extra properties not
-documented below.
+Validation error/warning object.When this object is created as a result of JSON Schema validation, this object is created by[z-schema](https://github.com/zaggino/z-schema) and it owns the structure so there can be extra properties notdocumented below.
 
 **Kind**: static typedef of <code>[sway](#module_sway)</code>  
 **Properties**
@@ -764,12 +678,12 @@ documented below.
 | --- | --- | --- |
 | code | <code>string</code> | The code used to identify the error/warning |
 | error | <code>string</code> | Whenever there is an upstream `Error` encountered, its message is here |
-| errors | <code>[Array.&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The nested error(s) encountered during validation |
-| lineage | <code>Array.&lt;string&gt;</code> | Contains the composition lineage for circular composition errors |
+| errors | <code>[[ &#x27;Array&#x27; ].&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The nested error(s) encountered during validation |
+| lineage | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | Contains the composition lineage for circular composition errors |
 | message | <code>string</code> | The human readable description of the error/warning |
 | name | <code>string</code> | The header name for header validation errors |
 | params | <code>array</code> | The parameters used when validation failed *(This is a z-schema construct and is only set for JSON Schema validation errors.)* |
-| path | <code>Array.&lt;string&gt;</code> | The path to the location in the document where the error/warning occurred |
+| path | <code>[ &#x27;Array&#x27; ].&lt;string&gt;</code> | The path to the location in the document where the error/warning occurred |
 | schemaId | <code>string</code> | The schema id *(This is a z-schema construct and is only set for JSON Schema validation errors and when its value is not `undefined`.) |
 
 <a name="module_sway.ValidationResults"></a>
@@ -782,16 +696,16 @@ Validation results object.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| errors | <code>[Array.&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The validation errors |
-| warnings | <code>[Array.&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The validation warnings |
+| errors | <code>[[ &#x27;Array&#x27; ].&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The validation errors |
+| warnings | <code>[[ &#x27;Array&#x27; ].&lt;ValidationEntry&gt;](#module_sway.ValidationEntry)</code> | The validation warnings |
 
 <a name="module_sway.create"></a>
 
-### sway.create(options) ⇒ <code>[Promise.&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code>
+### sway.create(options) ⇒ <code>[[ &#x27;Promise&#x27; ].&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code>
 Creates an ApiDefinition object from the provided OpenAPI definition.
 
 **Kind**: static method of <code>[sway](#module_sway)</code>  
-**Returns**: <code>[Promise.&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code> - The promise  
+**Returns**: <code>[[ &#x27;Promise&#x27; ].&lt;ApiDefinition&gt;](#module_sway.ApiDefinition)</code> - The promise  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -799,12 +713,5 @@ Creates an ApiDefinition object from the provided OpenAPI definition.
 
 **Example**  
 ```js
-Sway.create({
-  definition: 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml'
-})
-.then(function (apiDefinition) {
-  console.log('Documentation URL: ', apiDefinition.documentationUrl);
-}, function (err) {
-  console.error(err.stack);
-});
+Sway.create({  definition: 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml'}).then(function (apiDefinition) {  console.log('Documentation URL: ', apiDefinition.documentationUrl);}, function (err) {  console.error(err.stack);});
 ```
