@@ -6,6 +6,7 @@
 ---
   env:
     node: true
+    es2016: true
 
   rules:
     array-bracket-spacing: [2, "never"]
