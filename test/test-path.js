@@ -65,8 +65,8 @@ function runTests (mode) {
       assert.ok(pathObject.regexp instanceof RegExp);
 
       // Make sure they have the proper keys
-      assert.equal(1, pathObject.regexp.keys.length);
-      assert.equal('petId', pathObject.regexp.keys[0].name);
+      assert.equal(1, pathObject.keys.length);
+      assert.equal('petId', pathObject.keys[0].name);
 
       // Make sure they match the expected URLs
       assert.ok(_.isArray(pathObject.regexp.exec(apiDefinition.definitionFullyResolved.basePath + '/pet/1')));

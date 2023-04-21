@@ -2,6 +2,8 @@
 
 'use strict';
 
+var NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+
 module.exports = function (config) {
   console.log();
   console.log('Browser Tests');
@@ -36,25 +38,35 @@ module.exports = function (config) {
     },
     webpack: {
       mode: 'development',
+      plugins: [
+        new NodePolyfillPlugin()
+      ],
       module: {
         rules: [
           {
             test: /\.js$/,
-            loader: 'transform-loader?brfs'
+            loader: 'transform-loader',
+            options: {
+              brfs: ''
+            }
           },
           {
             test: /\.js$/,
             use: {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/env']
+                presets: [
+                  ['@babel/preset-env', {targets: 'defaults'}]
+                ]
               }
             }
           }
         ]
       },
-      node: {
-        fs: 'empty'
+      resolve: {
+        fallback: {
+          fs: false
+        }
       }
     },
     webpackMiddleware: {

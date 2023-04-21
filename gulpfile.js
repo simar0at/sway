@@ -29,7 +29,7 @@ var $ = require('gulp-load-plugins')({
     'gulp-jsdoc-to-markdown': 'jsdoc2MD'
   }
 });
-var del = require('del');
+var del = import('del');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var KarmaServer = require('karma').Server;
@@ -46,7 +46,7 @@ if (typeof Promise === 'undefined') {
 
 function displayCoverageReport (display) {
   if (display) {
-    gulp.src([])
+    gulp.src('*.js', [])
       .pipe($.istanbul.writeReports());
   }
 }
@@ -122,7 +122,7 @@ gulp.task('test-node', function (done) {
     .then(function () {
       return new Promise(function (resolve, reject) {
         gulp.src([
-          'index.js',
+    'index.js',
           'lib/**/*.js'
         ])
           .pipe($.istanbul({includeUntested: true}))
@@ -131,12 +131,12 @@ gulp.task('test-node', function (done) {
             gulp.src([
               'test/**/test-*.js',
               '!test/browser/test-*.js'
-            ])
-              .pipe($.mocha({reporter: 'spec'}))
+            ], {read: false})
+              .pipe($.mocha({reporter: 'spec', bail: true}))
               .on('error', function (err) {
                 reject(err);
               })
-              .on('end', function () {
+              .on('_result', function () {
                 displayCoverageReport(!runningAllTests);
 
                 resolve();

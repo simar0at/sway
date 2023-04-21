@@ -1,11 +1,15 @@
 'use strict';
 
 var path = require('path');
+var NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = [{
   devtool: 'inline-source-map',
   entry: './index.js',
   mode: 'development',
+  plugins: [
+		new NodePolyfillPlugin()
+	],
   module: {
     rules: [
       {
@@ -14,9 +18,7 @@ module.exports = [{
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/env', {
-                targets: 'cover 100%'
-              }]
+              ['@babel/preset-env', {targets: 'defaults'}]
             ]
           }
         }
@@ -24,8 +26,10 @@ module.exports = [{
     ]
   },
   name: 'sway',
-  node: {
-    fs: 'empty'
+  resolve: {
+    fallback: {
+      fs: false
+    }
   },
   optimization: {
     minimize: false
@@ -38,17 +42,18 @@ module.exports = [{
 }, {
   entry: './index.js',
   mode: 'production',
+  plugins: [
+		new NodePolyfillPlugin()
+	],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.m?js$/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/env', {
-                targets: 'cover 100%'
-              }]
+              ['@babel/preset-env', {targets: 'defaults'}]
             ]
           }
         }
@@ -56,8 +61,10 @@ module.exports = [{
     ]
   },
   name: 'sway-min',
-  node: {
-    fs: 'empty'
+  resolve: {
+    fallback: {
+      fs: false
+    }
   },
   optimization: {
     minimize: true
