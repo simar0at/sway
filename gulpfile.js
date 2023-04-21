@@ -34,7 +34,6 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var KarmaServer = require('karma').Server;
 var path = require('path');
-var runSequence = require('run-sequence');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config');
 
@@ -97,13 +96,13 @@ gulp.task('docs-ts-raw', function (done) {
 //
 //  * https://github.com/otris/jsdoc-tsd/issues/38
 //  * https://github.com/otris/jsdoc-tsd/issues/39
-gulp.task('docs-ts', ['docs-ts-raw'], function () {
+gulp.task('docs-ts', gulp.series('docs-ts-raw', function () {
   gulp.src(['index.d.ts'])
     .pipe($.replace('<*>', '<any>'))
     .pipe($.replace('module:sway.', ''))
     .pipe($.replace('Promise.<', 'Promise<'))
     .pipe(gulp.dest('.'));
-});
+}));
 
 gulp.task('lint', function () {
   return gulp.src([
@@ -165,12 +164,15 @@ gulp.task('test-browser', function () {
   });
 });
 
-gulp.task('test', function (done) {
+gulp.task('test',
   // Done this way to run in series until we upgrade to Gulp 4.x+
-  runSequence('test-node', 'test-browser', done);
-});
+  gulp.series('test-node', 'test-browser', function (done) {
+    done()
+  })
+);
 
-gulp.task('default', function (done) {
+gulp.task('default',
   // Done this way to run in series until we upgrade to Gulp 4.x+
-  runSequence('lint', 'test', 'docs', 'docs-ts', 'dist', done);
-});
+  gulp.series('lint', 'test', 'docs', 'docs-ts', 'dist', function (done) {
+    done()
+}));
