@@ -57,11 +57,11 @@ describe('issues', function () {
       })
       .catch(function (err) {
         var errorMessages = [
-          'Cannot read property \'consumes\' of null', // Node.js
+          'Cannot read properties of null (reading \'consumes\')', // Node.js
           'null is not an object (evaluating \'definitionFullyResolved.consumes\')' // PhantomJS (browser)
         ];
 
-        assert.ok(errorMessages.indexOf(err.message) > -1);
+        assert.ok(errorMessages.indexOf(err.message) > -1, 'Message was: ' +err.message);
       })
       .then(done, done);
   });
