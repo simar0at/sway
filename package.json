@@ -41,8 +41,8 @@
     "brfs": "^2.0.2",
     "connect": "^3.7.0",
     "del": "^7.0.0",
-    "glob": "^10.2.1",
     "eslint": "^8.38.0",
+    "glob": "^10.2.1",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
@@ -54,16 +54,19 @@
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.4",
     "gulp-util": "^3.0.8",
+    "https-browserify": "^1.0.0",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "^3.2.0",
     "karma-mocha": "^2.0.1",
     "karma-mocha-reporter": "^2.2.5",
     "karma-webpack": "^5.0.0",
     "mocha": "^10.2.0",
+    "path-browserify": "^1.0.1",
     "transform-loader": "^0.2.4",
     "webpack": "^5.80.0"
   },
   "dependencies": {
+    "@apidevtools/swagger-methods": "^3.0.2",
     "@faker-js/faker": "^7.6.0",
     "debug": "^4.3.4",
     "js-base64": "^3.7.5",
@@ -73,8 +76,11 @@
     "lodash": "^4.17.21",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "path-to-regexp": "^6.2.1",
-    "@apidevtools/swagger-methods": "^3.0.2",
     "swagger-schema-official": "2.0.0-bab6bed",
     "z-schema": "^6.0.1"
+  },
+  "overrides": {
+    "chokidar": "^3.5.3",
+    "glob-parent": "^6.0.2"
   }
 }

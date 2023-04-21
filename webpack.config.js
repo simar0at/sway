@@ -42,9 +42,6 @@ module.exports = [{
 }, {
   entry: './index.js',
   mode: 'production',
-  plugins: [
-		new NodePolyfillPlugin()
-	],
   module: {
     rules: [
       {
@@ -62,8 +59,11 @@ module.exports = [{
   },
   name: 'sway-min',
   resolve: {
-    fallback: {
-      fs: false
+    fallback:
+    {
+      "path": require.resolve("path-browserify"),
+      "https": require.resolve("https-browserify"),
+      "http": require.resolve("stream-http")
     }
   },
   optimization: {
